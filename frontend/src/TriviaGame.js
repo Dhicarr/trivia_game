@@ -39,8 +39,8 @@ const TriviaGame = ({}) => {
 
   const handleStartQuiz = () => {
     axios.get((category=="any") ? 
-    "https://opentdb.com/api.php?amount=20" : 
-    ("https://opentdb.com/api.php?amount=20&category="+category))
+    "https://opentdb.com/api.php?amount=40" : 
+    ("https://opentdb.com/api.php?amount=40&category="+category))
     .then((res) => {
       setQuestionsData(res.data.results);
       setView("mainGame");

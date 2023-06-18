@@ -7,11 +7,10 @@ import MusicOffIcon from '@mui/icons-material/MusicOff';
 
 const Background = ({ }) => {
   const [audio, setAudio] = useState(false);
-  const [audioPosition, setAudioPosition] = useState(156000);
+  const [audioPosition, setAudioPosition] = useState(0);
 
   const handlePlaying = (ev) => {
     setAudioPosition(ev.position);
-    console.log("test")
   }
   const handleAudioClick = () => {
     setAudio(!audio)
@@ -20,7 +19,7 @@ const Background = ({ }) => {
   return (
     <div className="Background">
       <Sound
-        url="https://freelistenonline.com/music/vkstream/21609847"
+        url="https://freelistenonline.com/music/vkstream/80186612"
         playStatus={audio ? Sound.status.PLAYING : Sound.status.PAUSED}
         playFromPosition={audioPosition}
         onPlaying={()=>handlePlaying}
